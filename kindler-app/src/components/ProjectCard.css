@@ -1,19 +1,19 @@
 /* src/components/ProjectCard.css */
 
-:root {
-    --primary-color: #3b82f6; /* Blue for consistency */
-}
+/* Removed all blue color definitions */
 
 .project-card {
-    /* **CRITICAL SIZE FIX:** Set to a very generous max-width for clear readability */
-    max-width: 900px; 
+    /* Critical Fix: Set max height and enable scrolling */
+    max-width: 800px;
+    max-height: 85vh; /* 85% of the viewport height */
+    overflow-y: auto; /* Enables vertical scrolling when content exceeds max-height */
+    
     margin: 40px auto;
     background-color: white;
-    border-radius: 20px; /* Slightly more rounded */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    border-radius: 20px; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
     padding: 0; 
-    overflow: hidden;
     border: 1px solid #e0e0e0;
 }
 
@@ -22,57 +22,57 @@
 }
 
 .card-header {
-    background-color: var(--primary-color);
-    color: white;
-    /* Very generous padding for header */
-    padding: 35px 30px; 
+    /* Neutral Header */
+    background-color: #f7f7f7; 
+    color: #333; /* Dark text */
+    padding: 30px 30px 20px; 
     text-align: center;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .card-header h3 {
-    /* Large font size for title */
-    font-size: 2.5em; 
+    font-size: 2.2em; 
     margin: 0;
     font-weight: 800;
 }
 
 .card-header p {
-    margin: 10px 0 0;
-    /* Increased font size */
-    font-size: 1.2em; 
+    margin: 8px 0 0;
+    font-size: 1.1em; 
     font-weight: 400;
+    color: #555;
 }
 
 .card-body {
-    /* Maximum padding for content area */
-    padding: 50px; 
+    padding: 40px; 
 }
 
 .card-body h4 {
-    color: var(--primary-color);
+    /* **FINAL COLOR FIX:** Changed from blue to a dark neutral gray */
+    color: #1f2937;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 8px;
-    /* Clearer heading font size */
-    font-size: 1.5em; 
+    padding-bottom: 5px;
+    font-size: 1.4em; 
 }
 
 .project-description {
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 35px;
-    /* Ensures main text is very readable */
-    font-size: 1.15em; 
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 30px;
+    font-size: 1.05em; 
 }
 
 .details-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 40px;
-    /* Readable detail font size */
-    font-size: 1.1em; 
+    gap: 20px;
+    margin-bottom: 30px;
+    font-size: 1em; 
 }
 
 .detail-item strong {
@@ -85,41 +85,41 @@
 .skills-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     margin-top: 15px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .skill-tag {
     background-color: #e6e6e6;
     color: #333;
-    /* Larger tags */
-    padding: 10px 16px; 
-    border-radius: 25px;
-    font-size: 1em; 
+    padding: 8px 14px; 
+    border-radius: 20px;
+    font-size: 0.9em; 
     font-weight: 600;
-    white-space: nowrap; /* Prevents skill tags from breaking into multiple lines if space is tight */
+    white-space: nowrap; 
 }
 
 /* --- Action Buttons (Swipe) --- */
 .card-actions {
     display: flex;
     justify-content: space-around;
-    /* Increased padding */
-    padding: 25px 50px; 
+    padding: 20px 40px; 
     border-top: 1px solid #eee;
-    background-color: #f9f9f9;
+    background-color: white; 
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.05); 
 }
 
 .action-btn {
-    /* Increased width for buttons */
-    width: 220px; 
-    padding: 18px 0;
+    width: 200px; 
+    padding: 15px 0;
     border-radius: 50px;
     font-weight: 700;
     cursor: pointer;
-    /* Clear button text */
-    font-size: 1.25em; 
+    font-size: 1.15em; 
     transition: transform 0.2s, box-shadow 0.2s;
     border: none;
 }
@@ -135,21 +135,22 @@
 
 .skip-btn:hover {
     background-color: #bbb;
-    box-shadow: 0 6px 15px rgba(187, 187, 187, 0.4);
+    box-shadow: 0 4px 10px rgba(187, 187, 187, 0.4);
 }
 
+/* Keeping the Match button color to distinguish the action, but removed the blue elsewhere */
 .match-btn {
-    background-color: #4CAF50; /* Green for Match */
+    background-color: #4CAF50; 
     color: white;
 }
 
 .match-btn:hover {
     background-color: #43a047;
-    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
 }
 
 /* Responsive adjustments for smaller screens (Mobile) */
-@media (max-width: 950px) {
+@media (max-width: 850px) {
     .project-card {
         margin-left: 15px;
         margin-right: 15px;
@@ -164,7 +165,6 @@
         padding: 20px;
     }
     .details-grid {
-        /* Stack details vertically on very small screens */
         grid-template-columns: 1fr;
         gap: 15px;
     }
