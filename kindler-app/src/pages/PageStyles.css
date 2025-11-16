@@ -1,0 +1,254 @@
+/* src/pages/BasePage.css - UNIFIED SHARED STYLES FOR ALL PAGES */
+
+/* --- General Page Content Container (Used by all simple pages) --- */
+.page-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-light);
+}
+
+.page-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* --- Typography and Structure --- */
+.page-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.page-subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.section-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 50px auto;
+    width: 80%;
+}
+
+/* --- Hero Section Styles (HomePage Marketing) --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #ff6992 100%);
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 25px rgba(255, 56, 92, 0.4);
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.lead-text {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.scroll-button {
+    background: white;
+    color: var(--primary-color);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.scroll-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Feature Section Styles (HomePage Marketing) --- */
+.feature-section {
+    padding: 40px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-box {
+    padding: 25px;
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-light);
+}
+
+.feature-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.feature-box h3 {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* --- Swiping Section (HomePage Swiping) --- */
+.swiping-section {
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+/* --- Match List Styles (MatchesPage) --- */
+.match-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.match-item:last-child {
+    border-bottom: none;
+}
+.chat-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* --- Profile Page Styles (ProfilePage) --- */
+.profile-page .profile-card {
+    padding: 30px;
+    /* Styles are already on the container */
+}
+.profile-page .profile-section {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+}
+.profile-page .profile-section h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+.profile-page .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+.profile-page .skill-tag {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* --- Form Styles (CreateProjectPage and Auth) --- */
+
+/* Primary Button (General use for Submit) */
+.primary-btn {
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    border: none;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(255, 56, 92, 0.3);
+}
+
+.primary-btn:hover {
+    background-color: #e6284a;
+}
+
+/* Secondary Button (for Cancel/Alternative) */
+.secondary-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.project-form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.project-form input, .project-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.2s;
+}
+
+.project-form input:focus, .project-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 56, 92, 0.1);
+}
+
+.project-form textarea {
+    resize: vertical;
+}
+
+/* Auth forms use their dedicated spacing from Auth.css, but this ensures consistency */
+.auth-form input {
+    margin-bottom: 15px !important;
+}

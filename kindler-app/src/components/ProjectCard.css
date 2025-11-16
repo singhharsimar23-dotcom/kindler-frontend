@@ -1,0 +1,142 @@
+/* src/components/ProjectCard.css */
+.project-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.creator-pic {
+    width: 50px;
+    height: 50px;
+    background-color: #ff385c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.header-text h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.4em;
+}
+
+.header-text small {
+    color: #777;
+}
+
+.description {
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.skill-tag {
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* src/pages/HomePage.css (Swiping UI) */
+.home-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.card-stack {
+    width: 100%;
+    max-width: 450px; /* Standard Tinder card width */
+    height: 55vh; /* Fixed height for card area */
+    position: relative;
+    overflow: hidden;
+}
+
+.swipe-card-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Swipe Animations */
+.swipe-card-wrapper.swipe-left {
+    transform: translateX(-150%) rotate(-10deg);
+    opacity: 0;
+}
+.swipe-card-wrapper.swipe-right {
+    transform: translateX(150%) rotate(10deg);
+    opacity: 0;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 30px;
+}
+
+.action-buttons button {
+    padding: 15px;
+    width: 80px;
+    height: 80px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+.action-buttons button:active {
+    transform: scale(0.95);
+}
+
+.reject-button {
+    background-color: #ffe0e6; /* Light Red */
+    color: #ff385c;
+}
+
+.like-button {
+    background-color: #e6ffed; /* Light Green */
+    color: #4CAF50;
+}
